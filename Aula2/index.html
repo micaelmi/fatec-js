@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/512/1046/1046283.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calculadora</h1>
+      <form class="form">
+        <input type="text" class="field" id="mostrador" />
+        <input type="text" class="op-field" />
+        <input type="text" class="field" />
+        <br />
+        <input type="button" value="7" id="b7" class="btn" />
+        <input type="button" value="8" id="b8" class="btn" />
+        <input type="button" value="9" id="b9" class="btn" />
+        <input type="button" value="+" id="mais" class="btn sum" />
+        <input type="button" value="c" id="limpa" class="btn clean" />
+
+        <br />
+
+        <input type="button" value="4" id="b4" class="btn" />
+        <input type="button" value="5" id="b5" class="btn" />
+        <input type="button" value="6" id="b6" class="btn" />
+        <input type="button" value="-" id="menos" class="btn sub" />
+        <input type="button" value="=" id="igual" class="btn equal" />
+        <br />
+
+        <input type="button" value="1" id="b1" class="btn" />
+        <input type="button" value="2" id="b2" class="btn" />
+        <input type="button" value="3" id="b3" class="btn" />
+        <input type="button" value="×" id="multi" class="btn mult" />
+        <input type="button" value="&#9003;" id="apaga" class="btn del" />
+        <br />
+
+        <input type="button" value="," id="virgula" class="btn" />
+        <input type="button" value="0" id="b0" class="btn" />
+        <input type="button" value="00" id="b00" class="btn" />
+        <input type="button" value="÷" id="divi" class="btn div" />
+      </form>
+    </div>
+    <script src="js/calc.js"></script>
+  </body>
+</html>

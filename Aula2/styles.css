@@ -1,0 +1,105 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-weight: 400;
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgb(27, 27, 27);
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  color: #fff;
+}
+
+.form {
+  border: 1px solid #fff;
+  padding: 24px 16px;
+  border-radius: 12px;
+  background-color: rgb(15, 15, 15);
+}
+
+.field {
+  width: 78px;
+  height: 42px;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0 10px;
+  font-size: 20px;
+  background-color: rgb(61, 63, 70);
+}
+
+.op-field {
+  width: 37px;
+  height: 37px;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 20px;
+  background-color: rgb(61, 63, 70);
+}
+
+.btn {
+  width: 44px;
+  height: 44px;
+  margin-right: 1px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  font-size: 20px;
+  background-color: rgb(56, 59, 68);
+  color: #fff;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  background-color: rgb(33, 35, 41);
+}
+
+.clean,
+.equal,
+.del {
+  background-color: green;
+}
+
+.clean:hover,
+.equal:hover,
+.del:hover {
+  background-color: rgb(6, 97, 6);
+}
+
+.sum,
+.sub,
+.mult,
+.div {
+  color: rgb(49, 223, 49);
+  font-weight: bold;
+}
+
+.micael {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  font-size: 20px;
+  color: #fff;
+}
+
+@media (max-width: 300px) {
+  .micael {
+    display: none;
+  }
+}
+
+::selection {
+  background-color: green;
+  color: white;
+}
