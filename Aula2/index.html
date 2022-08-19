@@ -11,14 +11,15 @@
       href="https://cdn-icons-png.flaticon.com/512/1046/1046283.png"
       type="image/x-icon"
     />
+    <script defer src="js/calc.js"></script>
   </head>
   <body>
     <div class="container">
       <h1>Calculadora</h1>
       <form class="form">
-        <input type="text" class="field" id="mostrador" />
-        <input type="text" class="op-field" />
-        <input type="text" class="field" />
+        <input type="text" class="field" value="0" id="mostrador" />
+        <input type="text" class="op-field" value=" " />
+        <input type="text" class="field" value="0" />
         <br />
         <input type="button" value="7" id="b7" class="btn" />
         <input type="button" value="8" id="b8" class="btn" />
@@ -42,12 +43,11 @@
         <input type="button" value="&#9003;" id="apaga" class="btn del" />
         <br />
 
-        <input type="button" value="," id="virgula" class="btn" />
+        <input type="button" value="." id="ponto" class="btn" />
         <input type="button" value="0" id="b0" class="btn" />
         <input type="button" value="00" id="b00" class="btn" />
         <input type="button" value="÷" id="divi" class="btn div" />
       </form>
     </div>
-    <script src="js/calc.js"></script>
   </body>
 </html>
