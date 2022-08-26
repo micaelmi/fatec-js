@@ -17,9 +17,15 @@
     <div class="container">
       <h1>Calculadora</h1>
       <form class="form">
+        <input type="text" class="field" value="0" id="numeroAuxiliar" />
+        <input type="text" class="op-field" value="" id="operador" />
         <input type="text" class="field" value="0" id="mostrador" />
-        <input type="text" class="op-field" value=" " />
-        <input type="text" class="field" value="0" />
+        <br />
+        <input type="button" value="√" id="raiz" class="btn" />
+        <input type="button" value="x²" id="quadrado" class="btn" />
+        <input type="button" value="xʸ" id="elevado" class="btn" />
+        <input type="button" value="%" id="porcentagem" class="btn" />
+        <input type="button" value="π" id="pi" class="btn" />
         <br />
         <input type="button" value="7" id="b7" class="btn" />
         <input type="button" value="8" id="b8" class="btn" />
@@ -33,14 +39,14 @@
         <input type="button" value="5" id="b5" class="btn" />
         <input type="button" value="6" id="b6" class="btn" />
         <input type="button" value="-" id="menos" class="btn sub" />
-        <input type="button" value="=" id="igual" class="btn equal" />
+        <input type="button" value="&#9003;" id="apaga" class="btn del" />
         <br />
 
         <input type="button" value="1" id="b1" class="btn" />
         <input type="button" value="2" id="b2" class="btn" />
         <input type="button" value="3" id="b3" class="btn" />
         <input type="button" value="×" id="multi" class="btn mult" />
-        <input type="button" value="&#9003;" id="apaga" class="btn del" />
+        <input type="button" value="=" id="igual" class="btn equal" />
         <br />
 
         <input type="button" value="." id="ponto" class="btn" />
