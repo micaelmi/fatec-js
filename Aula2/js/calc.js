@@ -29,6 +29,8 @@ let igual = document.getElementById("igual") // igual
 // LIMPADORES
 let apaga = document.getElementById("apaga")
 let limpa = document.getElementById("limpa")
+// HISTÓRICO
+let historico = document.getElementById("history")
 
 const PI = 3.141592653589793238462643383279502884197
 
@@ -61,65 +63,83 @@ function igualdade() {
     if (operador.value === "-") { // CONTA DE MENOS
         let aux = 0
         aux = mostrador.value
+        historico.textContent += numeroAuxiliar.value + " - " + mostrador.value
         mostrador.value = numeroAuxiliar.value - mostrador.value
         numeroAuxiliar.value = numeroAuxiliar.value + " - "
             + aux
         operador.value = "="
+        historico.textContent += " = " + mostrador.value + "\n"
     }
     if (operador.value === "+") { // CONTA DE MAIS
         let aux = 0
         aux = mostrador.value
+        historico.textContent += numeroAuxiliar.value + " + " + mostrador.value
         mostrador.value =
             parseFloat(numeroAuxiliar.value) + parseFloat(mostrador.value)
         numeroAuxiliar.value = numeroAuxiliar.value + " + "
             + aux
         operador.value = "="
+        historico.textContent += " = " + mostrador.value + "\n"
     }
     if (operador.value === "÷") { // CONTA DE DIVISÃO
         let aux = 0
         aux = mostrador.value
+        historico.textContent += numeroAuxiliar.value + " ÷ " + mostrador.value
         mostrador.value = numeroAuxiliar.value / mostrador.value
         numeroAuxiliar.value = numeroAuxiliar.value + " ÷ "
             + aux
         operador.value = "="
+        historico.textContent += " = " + mostrador.value + "\n"
     }
     if (operador.value === "×") { // CONTA DE MULTIPLICAÇÃO
         let aux = 0
         aux = mostrador.value
+        historico.textContent += numeroAuxiliar.value + " × " + mostrador.value
         mostrador.value = numeroAuxiliar.value * mostrador.value
         numeroAuxiliar.value = numeroAuxiliar.value + " × "
             + aux
         operador.value = "="
+        historico.textContent += " = " + mostrador.value + "\n"
     }
     if (operador.value === "√") { // CONTA DE RAIZ QUADRADA
         aux = mostrador.value
+        historico.textContent += " √ " + numeroAuxiliar.value
         mostrador.value = Math.sqrt(numeroAuxiliar.value)
         numeroAuxiliar.value = "√" + numeroAuxiliar.value
         operador.value = "="
+        historico.textContent += " = " + mostrador.value + "\n"
     }
     if (operador.value === "x²") { // CONTA DE ELEVADO A 2
         aux = mostrador.value
+        historico.textContent += numeroAuxiliar.value + "²"
         mostrador.value = (numeroAuxiliar.value) * (numeroAuxiliar.value)
         numeroAuxiliar.value = numeroAuxiliar.value + "²"
         operador.value = "="
+        historico.textContent += " = " + mostrador.value + "\n"
     }
-    if (operador.value === "xʸ") { // CONTA DE ELEVADO A 2
+    if (operador.value === "xʸ") { // CONTA DE UM ELEVADO A OUTRO
         aux = mostrador.value
+        historico.textContent += numeroAuxiliar.value + "^" + mostrador.value
         mostrador.value = (numeroAuxiliar.value) ** (mostrador.value)
         numeroAuxiliar.value = numeroAuxiliar.value + "²"
         operador.value = "="
+        historico.textContent += " = " + mostrador.value + "\n"
     }
     if (operador.value === "%") { // CONTA DE PORCENTAGEM
         aux = mostrador.value
+        historico.textContent += numeroAuxiliar.value + "% " + mostrador.value
         mostrador.value = (numeroAuxiliar.value / 100) * (mostrador.value)
         numeroAuxiliar.value = numeroAuxiliar.value + "%×" + mostrador.value
         operador.value = "="
+        historico.textContent += " = " + mostrador.value + "\n"
     }
-    if (operador.value === "π") { // CONTA DE PORCENTAGEM
+    if (operador.value === "π") { // CONTA DE PI
         aux = mostrador.value
+        historico.textContent += numeroAuxiliar.value + " ×π "
         mostrador.value = PI * (numeroAuxiliar.value)
         numeroAuxiliar.value = numeroAuxiliar.value + "×π"
         operador.value = "="
+        historico.textContent += " = " + mostrador.value + "\n"
     }
 
 }

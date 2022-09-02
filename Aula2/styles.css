@@ -26,6 +26,12 @@ html {
   flex-direction: column;
 }
 
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 h1 {
   margin-top: 4.5rem;
   color: var(--primary-lighter);
@@ -108,7 +114,29 @@ h1 {
   font-weight: bold;
 }
 
+textarea {
+  resize: none;
+  margin-left: 2rem;
+  background: none;
+  border-radius: var(--radius);
+  border: 1px solid var(--primary-lighter);
+  background-color: rgb(24, 0, 20);
+  color: var(--font-color);
+  padding: 1rem;
+  font-size: 1rem;
+}
+
 ::selection {
   background-color: var(--primary);
   color: var(--font-color);
+}
+
+@media (max-width: 700px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  textarea {
+    margin-top: 1rem;
+  }
 }
