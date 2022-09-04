@@ -114,9 +114,16 @@ h1 {
   font-weight: bold;
 }
 
+.history {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--font-color);
+  margin-left: 2rem;
+}
+
 textarea {
   resize: none;
-  margin-left: 2rem;
   background: none;
   border-radius: var(--radius);
   border: 1px solid var(--primary-lighter);
@@ -124,6 +131,7 @@ textarea {
   color: var(--font-color);
   padding: 1rem;
   font-size: 1rem;
+  text-align: center;
 }
 
 ::selection {
@@ -136,7 +144,14 @@ textarea {
     flex-direction: column;
   }
 
+  .history {
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    width: 100%;
+  }
+
   textarea {
-    margin-top: 1rem;
+    margin: 0 auto;
   }
 }
