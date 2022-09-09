@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Validação de Data</title>
+  </head>
+  <body>
+    <header>
+      <h1>Validação de Data</h1>
+    </header>
+    <main>
+      <form>
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" autocomplete="off" />
+        <label for="date">Data de Nascimento</label>
+        <input type="text" name="date" id="date" />
+        <input type="button" id="button" value="Cadastrar" />
+      </form>
+      <div class="avatar">
+        <h2>Seu avatar:</h2>
+        <img
+          src="https://avatars.dicebear.com/api/bottts/-.svg"
+          alt="Avatar"
+          width="169"
+          id="avatar"
+        />
+      </div>
+    </main>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/dateValidation.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

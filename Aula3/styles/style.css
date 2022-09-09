@@ -1,0 +1,60 @@
+:root {
+  color-scheme: dark;
+  --primary: #212121;
+  --secondary: #484848;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+header {
+  padding: 1rem;
+  background-color: var(--primary);
+}
+
+h1 {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 4rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 4px double var(--secondary);
+}
+
+input {
+  width: 270px;
+  height: 40px;
+  margin: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
+
+input[type=button] {
+  cursor: pointer;
+}
+
+.avatar {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 2rem;
+}/*# sourceMappingURL=style.css.map */

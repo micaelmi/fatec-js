@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div>TODO write content</div>
+    <div id="saida"></div>
+    <script>
+      a = 1; // cria uma variável global e inicia com valor 1
+      var a = 5; // utiliza a variável global já existente e modifica seu valor
+      var ab = 10; // cria uma variavel global e define o valor inicial
+
+      if (a === 5) {
+        // usa a variavel global para fazer o teste da condicao
+        let a; // cria uma variavel que existe no scopo do IF
+        a = 4; // atribui o valor para a variavel com scopo no IF
+        ac = 2; // atribui um valor para uma variável Global
+        var ab = 1; // Modifica o valor armazenado na variavel Global
+        var ac; // Cria uma variável Global, mas esta ação é realizada no início da execucao do código
+        console.log(a); // 4
+        console.log(ab); // 1
+        console.log(ac); // 2
+      }
+
+      console.log(a); // 5
+      console.log(ab); // 1
+
+      c1();
+      c2();
+
+      function c1() {
+        ad = 0;
+        var ad;
+      }
+
+      function c2() {
+        let ada;
+        ada = 20;
+        //let ada;
+      }
+
+      for (let ad = 0; ad < 10; ad++) {
+        // define a variavel ad que existe apenas dentro do scopo do For
+        alert(ad); // usa a variavel ad do scopo do for
+        // 1, 2, 3, 4 ... 9
+      }
+
+      alert(ad); // causa erro de execução porque ad não existe no scopo global
+    </script>
+  </body>
+</html>
