@@ -1,19 +1,35 @@
 :root {
   color-scheme: dark;
-  --primary: #212121;
-  --secondary: #484848;
+  --primary: #4d0965;
+  --secondary: #9f16d1;
+  --primary-hover: #7c0ba4;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Consolas", monospace;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(#121212, rgb(45, 2, 47));
+  overflow: hidden;
 }
 
 header {
   padding: 1rem;
   background-color: var(--primary);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px solid var(--secondary);
 }
 
 h1 {
@@ -30,26 +46,52 @@ main {
 form {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
-  margin-top: 4rem;
+  margin-top: 6rem;
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 2rem;
   border: 4px double var(--secondary);
+}
+
+label,
+span {
+  margin-left: 1rem;
 }
 
 input {
   width: 270px;
   height: 40px;
   margin: 0.5rem;
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 1rem;
+  border-radius: 24px;
+  border: 1px solid var(--secondary);
 }
 
 input[type=button] {
   cursor: pointer;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 24px;
+}
+
+input[type=button]:hover {
+  background-color: var(--primary-hover);
+}
+
+label {
+  font-size: 1rem;
+}
+
+span {
+  text-decoration: underline;
+  font-size: 0.8rem;
+  color: var(--secondary);
 }
 
 .avatar {
+  width: 200px;
+  aspect-ratio: 1/1;
   margin-top: 2rem;
   display: flex;
   justify-content: center;
@@ -57,4 +99,98 @@ input[type=button] {
   flex-direction: column;
   text-align: center;
   margin-left: 2rem;
+}
+
+#gear1 {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 256px;
+  -webkit-animation: rotation 4s infinite;
+          animation: rotation 4s infinite;
+}
+
+#gear2 {
+  position: absolute;
+  bottom: 50px;
+  right: -50px;
+  width: 256px;
+  -webkit-animation: rotation2 3s infinite;
+          animation: rotation2 3s infinite;
+}
+
+#gear3 {
+  position: absolute;
+  bottom: 30px;
+  right: 100px;
+  width: 169px;
+  -webkit-animation: rotation 2s infinite;
+          animation: rotation 2s infinite;
+}
+
+#gear4 {
+  position: absolute;
+  top: 100px;
+  left: 200px;
+  width: 169px;
+  -webkit-animation: rotation2 2s infinite;
+          animation: rotation2 2s infinite;
+}
+
+#by {
+  position: absolute;
+  bottom: 20px;
+}
+
+@media (max-width: 1000px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .avatar {
+    margin-left: 0;
+  }
+  #gear1,
+#gear2,
+#gear3,
+#gear4 {
+    display: none;
+  }
+  input {
+    width: 220px;
+  }
+}
+@-webkit-keyframes rotation {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotation2 {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes rotation2 {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }/*# sourceMappingURL=style.css.map */
