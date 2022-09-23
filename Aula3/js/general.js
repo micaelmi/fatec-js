@@ -1,4 +1,4 @@
-
+// FAZ UMA VALIDAÇÃO GERAL DE DATAS
 function dateValidation(date) {
     let day, month, year, hour, minute;
     let size = date.length;
@@ -76,6 +76,7 @@ function dateValidation(date) {
     }
 }
 
+// VERIFICA SE O CAMPO ESTÁ VAZIO
 function emptyFieldValidation(value) {
     return value.length !== 0 ? false : true;
 }

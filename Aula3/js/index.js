@@ -6,7 +6,7 @@ let error3 = document.getElementById('error3');
 let myDate = document.getElementById('date');
 let myDate2 = document.getElementById('date2');
 let myName = document.getElementById('name');
-let allValid = true;
+// let allValid = true;
 let errorMessage = "Data incorreta"
 
 button.addEventListener('click', verify);
