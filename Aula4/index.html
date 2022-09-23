@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <h1>Simple Calc</h1>
+    <form>
+      <input
+        type="text"
+        id="num1"
+        placeholder="Primeiro número"
+        autocomplete="off"
+      />
+      <br />
+      <!-- <input type="text" id="op" placeholder="Operação" /> -->
+      <select id="op">
+        <option value="Operação" selected disabled>Operação</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+      <br />
+      <input
+        type="text"
+        id="num2"
+        placeholder="Segundo número"
+        autocomplete="off"
+      />
+      <br />
+      <input type="button" id="calc" value="Calcular" />
+    </form>
+
+    <span id="results"></span>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
