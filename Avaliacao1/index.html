@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
+      type="image/x-icon"
+    />
+    <title>Avaliação de JavaScript</title>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
+        alt="JavaScript"
+        width="90px"
+      />
+      <h1>Avaliação de JavaScript</h1>
+      <h4>Micael Miranda Inácio</h4>
+      <h2>Questão 1:</h2>
+      <code>alert("Questão 1: Esse é um alerta")</code>
+      <button id="ativarAlerta">Clique aqui</button>
+      <br />
+      <hr />
+      <br />
+
+      <h2>Questão 2: tag &lt;script&gt;</h2>
+      Exemplo: <span>&lt;script src="js/script.js"&gt;&lt;/script&gt;</span> Ou
+      apenas: <span>&lt;script&gt;...&lt;/script&gt;</span>
+      <br />
+      <hr />
+      <br />
+
+      <h2>Questão 3:</h2>
+      <input
+        id="numero"
+        type="number"
+        placeholder="Escreva um número inteiro positivo"
+      />
+      <br />
+      <button id="calcular">Calcular</button>
+      <br />
+      <span id="contas"></span> <br />
+      <span id="resultadoSoma"></span>
+      <br />
+      <hr />
+      <br />
+
+      <h2>Questão 4:</h2>
+      <p>
+        A palavra "this" serve para dizer que o valor inserido será o do próprio
+        local em que se está chamando a função.
+        <br />
+        Ao usar um onclick="funcao(this)" em um input, estamos passando o valor
+        do próprio input para a função.
+      </p>
+      <br />
+      <hr />
+      <br />
+
+      <h2>Questão 5:</h2>
+      <input type="text" id="entradaTexto" placeholder="Digite um texto" />
+      <br />
+      <button id="inverter">Inverter</button>
+      <br />
+      <span id="textoInvertido"></span>
+      <br />
+      <hr />
+      <br />
+
+      <h2>Questão 6:</h2>
+      <p>
+        Posicionando o código JavaScript em outro arquivo, o projeto fica mais
+        organizado e o backend e o frontend são separados, o que é algo positivo
+        principalmente quando o software é desenvolvido em equipes e cada pessoa
+        cuida de uma parte. Além disso a manutenção também se torna mais fácil e
+        rápida.
+      </p>
+      <br />
+      <hr />
+      <br />
+
+      <h2>Questão 7:</h2>
+      <div class="contatos" id="formulario">
+        <div class="cadastro">
+          <h3>Cadastro de contatos</h3>
+          <input type="text" placeholder="Nome" id="nome" /> <br />
+          <span id="erroNome"></span>
+          <br />
+          <input type="tel" placeholder="Telefone" id="telefone" /> <br />
+          <span id="erroTelefone"></span>
+          <br />
+          <button id="cadastrar">Cadastrar</button>
+        </div>
+        <div class="lista">
+          <h3>Lista de contatos</h3>
+          <textarea id="contatos" cols="25" rows="10" disabled></textarea>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
