@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Consolas, monospace;
+}
+
+body {
+  background-color: #191622;
+}
+
+.container {
+  max-width: 800px;
+  margin-inline: auto;
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+.container img {
+  align-self: center;
+  width: 100px;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+}
+
+h1,
+h2 {
+  color: #cedced;
+}
+
+h1 {
+  text-align: center;
+  margin: 1rem;
+}
+
+h2 {
+  margin-top: 2rem;
+}
+
+a {
+  color: #ead41c;
+  font-size: 1.2rem;
+}/*# sourceMappingURL=styles.css.map */
