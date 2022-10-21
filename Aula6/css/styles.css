@@ -1,0 +1,116 @@
+:root {
+  --primary-color: #222;
+  --primary-color-hover: #000000;
+  --secondary-color: #eee;
+  --secondary-color-active: #dedede;
+  --secondary-color-darker: #cbcbcb;
+}
+
+.dark-mode:root {
+  --primary-color: #eee;
+  --primary-color-hover: #c7c7c7;
+  --secondary-color: #222;
+  --secondary-color-active: #444;
+  --secondary-color-darker: #323232;
+}
+
+body {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  margin: 5rem 0 1rem 0;
+}
+
+.switch-dark-mode {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  border: 1px solid var(--primary-color);
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+main {
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+fieldset {
+  padding: 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.25rem;
+  background-color: var(--secondary-color-darker);
+  margin-bottom: 2rem;
+}
+
+legend {
+  font-weight: bold;
+}
+
+input,
+select,
+option,
+a {
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.25rem;
+  margin: 0.25rem;
+  background-color: var(--secondary-color-active);
+  color: var(--primary-color);
+}
+
+input[type="button"] {
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-left: 35%;
+  width: 30%;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.25rem;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+a {
+  margin-top: 1rem;
+}
+
+input[type="button"]:hover,
+a:hover {
+  background-color: var(--primary-color-hover);
+}
+
+a {
+  text-align: center;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.25rem;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  transition: 0.5s ease;
+  text-decoration: none;
+}

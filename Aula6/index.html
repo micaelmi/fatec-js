@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Análise de vendas</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      defer
+      src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"
+    ></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/sales.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Registro de vendas</h1>
+      <div class="switch-dark-mode">
+        <input type="checkbox" id="activate-dark" /> Dark Mode
+      </div>
+    </header>
+    <main>
+      <form>
+        <fieldset>
+          <legend>Lançamentos</legend>
+          <label for="name">Nome</label> <br />
+          <input
+            type="text"
+            id="name"
+            placeholder="Digite o nome do vendedor"
+            autocomplete="off"
+          />
+          <br />
+          <label for="month">Mês</label> <br />
+          <select id="month">
+            <option value="x" disabled selected>Selecione o mês</option>
+            <option value="01">Janeiro</option>
+            <option value="02">Fevereiro</option>
+            <option value="03">Março</option>
+            <option value="04">Abril</option>
+            <option value="05">Maio</option>
+            <option value="06">Junho</option>
+            <option value="07">Julho</option>
+            <option value="08">Agosto</option>
+            <option value="09">Setembro</option>
+            <option value="10">Outubro</option>
+            <option value="11">Novembro</option>
+            <option value="12">Dezembro</option>
+          </select>
+          <br />
+          <label for="amount">Valor (R$)</label> <br />
+          <input
+            type="number"
+            id="amount"
+            placeholder="Apenas números"
+            autocomplete="off"
+            value=""
+          />
+          <br />
+          <input type="button" value="Salvar" id="save" />
+        </fieldset>
+      </form>
+      <a href="./charts.html"> Relatório de Vendas</a>
+    </main>
+  </body>
+</html>
