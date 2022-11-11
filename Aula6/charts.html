@@ -18,9 +18,19 @@
       src="https://www.gstatic.com/charts/loader.js"
     ></script>
     <script defer src="js/main.js"></script>
-    <script defer src="js/sales.js"></script>
+    <script defer src="js/charts.js"></script>
   </head>
   <body>
-    <div id="columnchart_values" style="width: 900px; height: 300px"></div>
+    <h1>Relatório de vendas</h1>
+    <div class="switch-dark-mode">
+      <input type="checkbox" id="activate-dark" /> Dark Mode
+    </div>
+    <form class="chart-options">
+      <label>Escolha a direção do gráfico</label> <br>
+      <input class="radio" type="radio" id="horizontal" name="direction" checked/> horizontal <br>
+      <input class="radio" type="radio" id="vertical" name="direction" /> vertical <br>
+      <input type="button" value="Criar gráfico" id="createChart">
+    </form>
+    <div id="showChart"></div>
   </body>
 </html>
