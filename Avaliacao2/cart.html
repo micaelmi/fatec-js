@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon" />
+    <title>Estrela Natalina</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/cart.css" />
+    <script defer src="./js/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" id="back-to-home">
+        <img src="./img/back.png" alt="Voltar para a Home" width="32" />
+      </a>
+      <img src="img/logo.png" alt="Logo Estrela Natalina" height="60" />
+      <picture class="flasher">
+        <source
+          media="(max-width: 768px)"
+          srcset="img/flasher-mini.png"
+          type="image/png"
+        />
+        <img src="img/flasher.png" alt="Pisca-pisca" />
+      </picture>
+    </header>
+    <main>
+      <h2>
+        <img src="img/ball.png" alt="Bola Natalina" />
+        Seu Carrinho
+      </h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Foto</th>
+            <th>Nome</th>
+            <th>Valor Un.</th>
+            <th>Quantidade</th>
+            <th>Valor total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>
+              <img
+                src="./img/product1.png"
+                alt="Mini árvore decorada"
+                width="40"
+              />
+            </th>
+            <th>Mini árvore decorada</th>
+            <th>R$51,00</th>
+            <th>
+              <div class="quantity">
+                <button>
+                  <img src="./img/PlusCircle.png" alt="Adicionar" />
+                </button>
+                <span>20</span>
+                <button>
+                  <img src="./img/MinusCircle.png" alt="Remover" />
+                </button>
+                <button><img src="./img/Trash.png" alt="Excluir" /></button>
+              </div>
+            </th>
+            <th>R$102,00</th>
+          </tr>
+        </tbody>
+      </table>
+      <div class="checkout">
+        <div class="total">
+          <p>Total: R$</p>
+          <span></span>
+          <button>
+            <img src="./img/gift.png" alt="Ícone de Presente" />
+            <p>Finalizar compra</p>
+          </button>
+          <a href="checkout.html">Checkout</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+:root {
+  --primary: #a30909;
+  --secondary: #056803;
+  --secondary-hover: #024b01;
+  --tertiary: #ffd700;
+  --tertiary-lighter: #fff589;
+  --dark: #111;
+  --light: #fff;
+}
+
+#back-to-home {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid var(--tertiary);
+  text-align: left;
+  padding: 8px;
+  border-radius: 0.25rem;
+}
+
+tr:nth-child(even),
+thead tr {
+  background-color: var(--tertiary-lighter);
+}
+
+th {
+  text-align: center;
+}
+
+tr th img {
+  border-radius: 50%;
+}
+
+tr th button {
+  border: none;
+  background-color: transparent;
+}
+
+tr th button img {
+  width: 24px;
+}
+
+tr th span {
+  font-size: 18px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.checkout {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.total {
+  margin-top: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  border: 1px solid var(--tertiary);
+  border-radius: 0.25rem;
+}
+
+.checkout button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: var(--secondary);
+  color: var(--light);
+  padding: 0.25rem 0.5rem;
+  margin-left: 1rem;
+  border-radius: 0.25rem;
+}
+.checkout button img {
+  width: 24px;
+}

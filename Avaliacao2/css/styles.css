@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Xanh+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+:root {
+  --primary: #a30909;
+  --secondary: #056803;
+  --secondary-hover: #024b01;
+  --dark: #111;
+  --light: #fff;
+}
+/* ================= HEADER =================== */
+header {
+  background-color: var(--primary);
+  color: var(--light);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.5rem;
+
+  margin-bottom: 100px;
+}
+
+header h1 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header h2 {
+  font-weight: 500;
+}
+
+header h1 img {
+  width: 2.5rem;
+}
+
+header a {
+  position: absolute;
+  right: 2rem;
+  top: 1.5rem;
+}
+
+.flasher {
+  position: absolute;
+  top: 43px;
+  z-index: -1;
+}
+/* ========================== MAIN ========================== */
+
+main {
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  color: var(--secondary);
+}
+
+h2 img {
+  width: 40px;
+}
+
+.products {
+  margin-top: 2rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.card {
+  width: 250px;
+  height: 350px;
+  border: 1px solid var(--secondary);
+  border-radius: 0.25rem;
+  color: var(--dark);
+  overflow: hidden;
+  box-shadow: 0px 2.9px 5.3px rgba(0, 0, 0, 0.036),
+    0px 9.6px 17.9px rgba(0, 0, 0, 0.054), 0px 43px 80px rgba(0, 0, 0, 0.09);
+}
+
+.card img:first-child() {
+  z-index: -1;
+  margin-top: -20px;
+}
+
+.content {
+  margin-top: -0.75rem;
+  padding-inline: 0.5rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-family: "Xanh Mono", monospace;
+  color: var(--secondary);
+}
+
+.description {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  gap: 0.25rem;
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 0.5rem;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.add-to-cart p {
+  font-size: 0.625rem;
+  color: var(--light);
+}
+
+.add-to-cart:hover {
+  background-color: var(--secondary-hover);
+}
+
+.add-to-cart img {
+  width: 18px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  background-color: var(--primary);
+}
+
+.flasher-divider {
+  position: absolute;
+  bottom: -50px;
+}
