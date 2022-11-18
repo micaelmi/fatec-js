@@ -10,13 +10,26 @@
 
     <link rel="stylesheet" href="./css/styles.css" />
     <script defer src="./js/main.js"></script>
+    <script defer src="./js/home.js"></script>
   </head>
   <body>
     <header>
       <img src="img/logo.png" alt="Logo Estrela Natalina" height="60" />
-      <a href="cart.html">
-        <img src="./img/cart.svg" alt="Ver Carrinho" width="32" />
-      </a>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="orders.html">Pedidos</a>
+        <a href="cart.html"> Carrinho </a>
+      </div>
+      <button id="open-menu">
+        <img src="./img/menu.svg" alt="Abrir Menu" />
+      </button>
+      <div class="links-mobile" id="menu">
+        <button id="close-menu">x</button>
+        <a href="index.html">Home</a>
+        <a href="orders.html">Pedidos</a>
+        <a href="cart.html">Carrinho</a>
+        <a href="checkout.html">Finalizar compra</a>
+      </div>
       <picture class="flasher">
         <source
           media="(max-width: 768px)"
@@ -26,106 +39,17 @@
         <img src="img/flasher.png" alt="Pisca-pisca" />
       </picture>
     </header>
+
     <main>
       <section class="products">
         <h2>
           <img src="img/ball.png" alt="Bola Natalina" />
           Conheça nossos produtos
         </h2>
-        <div class="cards">
-          <div class="card">
-            <img src="./img/product1.png" alt="Mini árvore decorada" />
-            <div class="content">
-              <h3>Mini árvore decorada</h3>
-              <p class="description">
-                Uma pequena árvore com 50cm, iluminada e com bonecos para
-                decorar o entorno. Ideal para lugares pequenos.
-              </p>
-              <div class="flex">
-                <h3>R$51,00</h3>
-                <button class="add-to-cart">
-                  <img
-                    src="./img/add-to-cart.svg"
-                    alt="Adicionar ao carrinho"
-                  />
-                  <p>Adicionar ao carrinho</p>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="./img/product2.png" alt="Bonecos Natalinos" />
-            <div class="content">
-              <h3>Bonequinhos Natalinos</h3>
-              <p class="description">
-                Miniaturas dos principais personagens do Natal, Papai Noel,
-                Boneco de Neve e Rena. Decore qualquer móvel com eles.
-              </p>
-              <div class="flex">
-                <h3>R$27,00</h3>
-                <button class="add-to-cart">
-                  <img
-                    src="./img/add-to-cart.svg"
-                    alt="Adicionar ao carrinho"
-                  />
-                  <p>Adicionar ao carrinho</p>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="./img/product3.png" alt="Pisca-pisca amarelo" />
-            <div class="content">
-              <h3>Pisca-pisca amarelo</h3>
-              <p class="description">
-                Fio de pisca-pisca LED com 15m, 127v. Para pendurar na casa e
-                instalar o clima natalino.
-              </p>
-              <div class="flex">
-                <h3>R$78,00</h3>
-                <button class="add-to-cart">
-                  <img
-                    src="./img/add-to-cart.svg"
-                    alt="Adicionar ao carrinho"
-                  />
-                  <p>Adicionar ao carrinho</p>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <img src="./img/product4.png" alt="Bolas iluminadas" />
-            <div class="content">
-              <h3>Bolas iluminadas</h3>
-              <p class="description">
-                Varal de bolas iluminadas com papais noeis dentro, contém 8
-                unidades. Brinde de uma bola reserva.
-              </p>
-              <div class="flex">
-                <h3>R$65,00</h3>
-                <button class="add-to-cart">
-                  <img
-                    src="./img/add-to-cart.svg"
-                    alt="Adicionar ao carrinho"
-                  />
-                  <p>Adicionar ao carrinho</p>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="cards"></div>
       </section>
     </main>
     <footer>
-      <img
-        class="flasher-divider"
-        src="img/flasher-2.png"
-        alt="Pisca-pisca"
-        height="70"
-      />
       <img src="img/icon.png" alt="Logo Estrela Natalina" />
     </footer>
   </body>

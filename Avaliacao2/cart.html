@@ -14,10 +14,22 @@
   </head>
   <body>
     <header>
-      <a href="index.html" id="back-to-home">
-        <img src="./img/back.png" alt="Voltar para a Home" width="32" />
-      </a>
       <img src="img/logo.png" alt="Logo Estrela Natalina" height="60" />
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="orders.html">Pedidos</a>
+        <a href="cart.html"> Carrinho </a>
+      </div>
+      <button id="open-menu">
+        <img src="./img/menu.svg" alt="Abrir Menu" />
+      </button>
+      <div class="links-mobile" id="menu">
+        <button id="close-menu">x</button>
+        <a href="index.html">Home</a>
+        <a href="orders.html">Pedidos</a>
+        <a href="cart.html">Carrinho</a>
+        <a href="checkout.html">Finalizar compra</a>
+      </div>
       <picture class="flasher">
         <source
           media="(max-width: 768px)"
@@ -27,6 +39,7 @@
         <img src="img/flasher.png" alt="Pisca-pisca" />
       </picture>
     </header>
+
     <main>
       <h2>
         <img src="img/ball.png" alt="Bola Natalina" />
