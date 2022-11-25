@@ -4,6 +4,7 @@ const menu = document.getElementById('menu');
 
 window.onload = () => {
     startProducts();
+    renderProducts();
 }
 
 openMenu.addEventListener('click', function () {
@@ -27,7 +28,7 @@ function readStorage(key) {
         return dados;
     }
     else {
-        alert("Operacao não disponível");
+        alert("Operação não disponível");
     }
     return false;
 }
@@ -82,9 +83,8 @@ function startProducts() {
     // alert(storedProducts[0].price)
     if (storedProducts.length < 1) {
         recordStorage('products', products)
-        storedProducts = readStorage('products');
         console.log("Novos produtos cadastrados")
-    } else[
+    } else {
         console.log("Os produtos já estavam cadastrados")
-    ]
+    }
 }

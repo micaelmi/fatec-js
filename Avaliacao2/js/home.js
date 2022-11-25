@@ -1,10 +1,6 @@
 const cardsContainer = document.querySelector(".cards")
 const addToCartButton = document.querySelectorAll(".add-to-cart")
-
-window.onload = () => {
-    renderProducts()
-}
-
+const itemsQuantity = document.querySelector("#items")
 
 function renderProducts() {
     let products = readStorage('products');
@@ -37,15 +33,16 @@ function renderProducts() {
 function addToCart(itemID) {
     let products = readStorage('products');
     let cart = readStorage('cart');
-    if (cart.lenght < 1) {
+    if (cart.length < 1) {
         cart = []
     }
     let product = products[itemID]
-    if (1 != 1) { // SE JÁ TIVER ESSE ITEM NO CARRINHO...
-        alert("Adicionando outra unidade...")
-        cart.id.quantity++;
+    let itemFound = []
+    itemFound = cart.find(({ id }) => id === itemID)
+    // console.log(itemFound)
+    if (itemFound !== undefined) {
+        changeStorage("sum", itemID)
     } else {
-        alert(`Adicionando ${product.title} ao carrinho...`)
         cart.push({
             id: product.id,
             url: product.url,
@@ -53,8 +50,62 @@ function addToCart(itemID) {
             price: product.price,
             quantity: 1,
         })
+        product.stored--;
+        recordStorage('cart', cart);
+        recordStorage('products', products);
+
+        iziToast.show({
+            title: product.title + ' adicionado(a) com sucesso!',
+            timeout: 2000,
+            color: 'green',
+            balloon: true,
+        });
     }
-    products[itemID].stored--;
-    recordStorage('cart', cart);
-    recordStorage('products', products);
+    itemsQuantity.textContent = cart.length
+}
+
+function changeStorage(operation, id) {
+    let products = readStorage('products');
+    let cart = readStorage('cart');
+    let product = products[id]
+    let cartItem = cart[id]
+
+    let i = 0;
+    let updated = false;
+    do {
+        if (cart[i].id === id) {
+            if (operation === "sub") {
+                cartItem.quantity--;
+                product.stored++;
+            }
+            if (operation === "sum") {
+                if (product.stored > 0) {
+                    cartItem.quantity++;
+                    product.stored--;
+
+                    iziToast.show({
+                        title: 'Item adicionado',
+                        message: 'quantidade: ' + cartItem.quantity,
+                        timeout: 2000,
+                        color: 'green'
+                    });
+                } else {
+                    iziToast.show({
+                        title: 'Você já adicionou todo o estoque desse produto',
+                        timeout: 2000,
+                        color: 'yellow',
+                    });
+                }
+            }
+            if (operation === "delete") {
+                product.stored += cartItem.quantity;
+                cartItem.splice(i, 1);
+            }
+
+            recordStorage('cart', cart);
+            recordStorage('products', products);
+            updated = true;
+        }
+        i++
+    } while (updated == false)
 }

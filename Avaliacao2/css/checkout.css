@@ -1,0 +1,51 @@
+:root {
+  --primary: #a30909;
+  --secondary: #056803;
+  --secondary-hover: #024b01;
+  --dark: #111;
+  --light: #fff;
+}
+
+main,
+form,
+fieldset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+fieldset {
+  width: fit-content;
+
+  border-radius: 20px;
+}
+
+input {
+  width: 20rem;
+
+  margin: 10px;
+  padding: 5px 11px;
+
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+main fieldset p {
+  width: 26rem;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+
+  margin: 10px 0;
+  padding: 10px 1.5rem;
+
+  border-radius: 30px;
+
+  color: var(--light);
+  background-color: var(--secondary);
+}
