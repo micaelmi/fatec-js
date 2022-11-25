@@ -1,6 +1,10 @@
 const cardsContainer = document.querySelector(".cards")
-const addToCartButton = document.querySelectorAll(".add-to-cart")
 const itemsQuantity = document.querySelector("#items")
+
+window.onload = () => {
+    startProducts();
+    renderProducts();
+}
 
 function renderProducts() {
     let products = readStorage('products');
@@ -39,7 +43,6 @@ function addToCart(itemID) {
     let product = products[itemID]
     let itemFound = []
     itemFound = cart.find(({ id }) => id === itemID)
-    // console.log(itemFound)
     if (itemFound !== undefined) {
         changeStorage("sum", itemID)
     } else {
@@ -62,50 +65,4 @@ function addToCart(itemID) {
         });
     }
     itemsQuantity.textContent = cart.length
-}
-
-function changeStorage(operation, id) {
-    let products = readStorage('products');
-    let cart = readStorage('cart');
-    let product = products[id]
-    let cartItem = cart[id]
-
-    let i = 0;
-    let updated = false;
-    do {
-        if (cart[i].id === id) {
-            if (operation === "sub") {
-                cartItem.quantity--;
-                product.stored++;
-            }
-            if (operation === "sum") {
-                if (product.stored > 0) {
-                    cartItem.quantity++;
-                    product.stored--;
-
-                    iziToast.show({
-                        title: 'Item adicionado',
-                        message: 'quantidade: ' + cartItem.quantity,
-                        timeout: 2000,
-                        color: 'green'
-                    });
-                } else {
-                    iziToast.show({
-                        title: 'Você já adicionou todo o estoque desse produto',
-                        timeout: 2000,
-                        color: 'yellow',
-                    });
-                }
-            }
-            if (operation === "delete") {
-                product.stored += cartItem.quantity;
-                cartItem.splice(i, 1);
-            }
-
-            recordStorage('cart', cart);
-            recordStorage('products', products);
-            updated = true;
-        }
-        i++
-    } while (updated == false)
 }

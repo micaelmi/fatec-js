@@ -19,6 +19,16 @@ img {
   --dark: #111;
   --light: #fff;
 }
+
+button {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  scale: 0.95;
+}
+
 /* ================= HEADER =================== */
 header {
   background-color: var(--primary);

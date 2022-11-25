@@ -2,11 +2,6 @@ const openMenu = document.getElementById('open-menu');
 const closeMenu = document.getElementById('close-menu');
 const menu = document.getElementById('menu');
 
-window.onload = () => {
-    startProducts();
-    renderProducts();
-}
-
 openMenu.addEventListener('click', function () {
     menu.classList.add('open')
 })
@@ -87,4 +82,71 @@ function startProducts() {
     } else {
         console.log("Os produtos já estavam cadastrados")
     }
+}
+
+
+function changeStorage(operation, id) {
+    let products = readStorage('products');
+    let cart = readStorage('cart');
+    let product
+    let cartItem
+
+    let index = 0;
+    let selectedItems = false;
+    do {
+        if (cart[index].id === id) {
+            product = products[index];
+            cartItem = cart[index];
+            selectedItems = true;
+        }
+        index++;
+    } while (selectedItems == false)
+
+    let i = 0;
+    let updated = false;
+    do {
+        if (cart[i].id === id) {
+            if (operation === "sub") {
+                if (cartItem.quantity > 1) {
+                    cartItem.quantity--;
+                    product.stored++;
+                } else {
+                    cart.splice(i, 1)
+                    iziToast.show({
+                        title: 'Produto removido do carrinho',
+                        timeout: 2000,
+                        color: 'red',
+                    });
+                }
+            }
+            if (operation === "sum") {
+                if (product.stored > 0) {
+                    cartItem.quantity++;
+                    product.stored--;
+
+                    iziToast.show({
+                        title: 'Item adicionado',
+                        message: 'quantidade: ' + cartItem.quantity,
+                        timeout: 2000,
+                        color: 'green'
+                    });
+                } else {
+                    iziToast.show({
+                        title: 'Você já adicionou todo o estoque desse produto',
+                        timeout: 2000,
+                        color: 'yellow',
+                    });
+                }
+            }
+            if (operation === "delete") {
+                product.stored += cartItem.quantity;
+                cartItem.splice(i, 1);
+            }
+
+            recordStorage('cart', cart);
+            recordStorage('products', products);
+            updated = true;
+        }
+        i++
+    } while (updated == false)
 }
