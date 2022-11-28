@@ -2,26 +2,32 @@ const itemsCart = document.querySelector('#items-cart')
 const amount = document.querySelector("#amount")
 const showCart = document.querySelector("#show-cart")
 const emptyCart = document.querySelector("#empty-cart")
-
-
+let empty = true
 
 window.onload = () => {
     let cart = readStorage('cart');
     startProducts();
-    if (cart.length > 0) {
-        showCartOrEmptyMessage(true);
-        renderCart();
-    } else {
-        showCartOrEmptyMessage(false);
+    for (let i = 0; i < cart.length; i++) {
+        if (cart[i].quantity !== 0) {
+            empty = false
+        }
+        if (empty) {
+            showCartOrEmptyMessage(false);
+        } else {
+            showCartOrEmptyMessage(true);
+        }
     }
+    renderCart();
 }
 
 function renderCart() {
     let cart = readStorage('cart');
     let purchaseAmount = 0;
+    let outOfCartProducts = 0
     cart.map((item) => {
-        itemsCart.innerHTML +=
-            `
+        if (item.quantity > 0) {
+            itemsCart.innerHTML +=
+                `
             <tr>
             <th>
                 <img
@@ -49,6 +55,14 @@ function renderCart() {
             <th>R$${item.price * item.quantity}</th>
             </tr>
             `
+        } else {
+            outOfCartProducts++;
+        }
+        if (outOfCartProducts === cart.length) {
+            showCartOrEmptyMessage(false);
+        } else {
+            showCartOrEmptyMessage(true);
+        }
         purchaseAmount += (item.price * item.quantity)
     })
 
@@ -58,20 +72,28 @@ function renderCart() {
 function updateCart(operation, id) {
     let cart = readStorage('cart');
     changeStorage(operation, id)
-    if (cart.length > 0) {
-        showCartOrEmptyMessage(true);
-        itemsCart.innerHTML = ''
-        renderCart()
-    } else {
-        showCartOrEmptyMessage(false);
+    for (let i = 0; i < cart.length; i++) {
+        if (cart[i].quantity !== 0) {
+            empty = false
+        }
+        if (empty) {
+            showCartOrEmptyMessage(false);
+        } else {
+            showCartOrEmptyMessage(true);
+            itemsCart.innerHTML = ''
+            renderCart();
+        }
     }
+
 }
 
 function showCartOrEmptyMessage(filled) {
     if (filled) {
+        // true
         showCart.style.display = 'block'
         emptyCart.style.display = 'none'
     } else {
+        // false
         showCart.style.display = 'none'
         emptyCart.style.display = 'block'
     }

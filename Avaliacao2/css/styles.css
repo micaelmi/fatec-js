@@ -29,6 +29,10 @@ button:hover {
   scale: 0.95;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* ================= HEADER =================== */
 header {
   background-color: var(--primary);

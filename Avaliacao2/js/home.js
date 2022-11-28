@@ -1,9 +1,11 @@
 const cardsContainer = document.querySelector(".cards")
 const itemsQuantity = document.querySelector("#items")
 
+
 window.onload = () => {
     startProducts();
     renderProducts();
+    showQuantityInCart()
 }
 
 function renderProducts() {
@@ -35,34 +37,15 @@ function renderProducts() {
 }
 
 function addToCart(itemID) {
-    let products = readStorage('products');
-    let cart = readStorage('cart');
-    if (cart.length < 1) {
-        cart = []
-    }
-    let product = products[itemID]
-    let itemFound = []
-    itemFound = cart.find(({ id }) => id === itemID)
-    if (itemFound !== undefined) {
-        changeStorage("sum", itemID)
-    } else {
-        cart.push({
-            id: product.id,
-            url: product.url,
-            title: product.title,
-            price: product.price,
-            quantity: 1,
-        })
-        product.stored--;
-        recordStorage('cart', cart);
-        recordStorage('products', products);
+    changeStorage("sum", itemID)
+    showQuantityInCart()
+}
 
-        iziToast.show({
-            title: product.title + ' adicionado(a) com sucesso!',
-            timeout: 2000,
-            color: 'green',
-            balloon: true,
-        });
+function showQuantityInCart() {
+    let itemsInCart = 0
+    let cart = readStorage('cart');
+    for (let i = 0; i < cart.length; i++) {
+        itemsInCart += cart[i].quantity;
     }
-    itemsQuantity.textContent = cart.length
+    itemsQuantity.textContent = itemsInCart
 }
