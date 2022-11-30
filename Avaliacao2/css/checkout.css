@@ -21,18 +21,25 @@ fieldset {
   border-radius: 20px;
 }
 
+legend {
+  margin-left: 1rem;
+  padding: 0.2rem;
+}
+
 input {
   width: 20rem;
 
-  margin: 10px;
-  padding: 5px 11px;
+  margin: 0.5rem;
+  padding: 0.25rem 0.5rem;
 
   border: 1px solid black;
   border-radius: 10px;
 }
 
-main fieldset p {
-  width: 26rem;
+#products {
+  width: 20rem;
+  margin-inline: 0.5rem;
+  padding-inline: 0.5rem;
 }
 
 button {
@@ -45,6 +52,7 @@ button {
   padding: 10px 1.5rem;
 
   border-radius: 30px;
+  border: none;
 
   color: var(--light);
   background-color: var(--secondary);

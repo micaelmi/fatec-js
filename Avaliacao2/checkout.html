@@ -8,9 +8,17 @@
     <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon" />
     <title>Estrela Natalina</title>
 
+    <link rel="stylesheet" href="./css/iziToast.min.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/checkout.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"
+    ></script>
+    <script defer src="./js/iziToast.min.js" type="text/javascript"></script>
     <script defer src="./js/main.js"></script>
+    <script defer src="./js/checkout.js"></script>
+    <script defer src="./js/cep.js"></script>
   </head>
   <body>
     <header>
@@ -28,7 +36,6 @@
         <a href="index.html">Home</a>
         <a href="orders.html">Pedidos</a>
         <a href="cart.html">Carrinho</a>
-        <a href="checkout.html">Finalizar compra</a>
       </div>
       <picture class="flasher">
         <source
@@ -48,26 +55,37 @@
       <form>
         <fieldset>
           <legend>Seus dados:</legend>
-          <input type="text" placeholder="CPF" />
-          <input type="text" placeholder="Nome" />
-          <input type="email" placeholder="E-mail" />
+          <input required type="text" placeholder="CPF" id="cpf" />
+          <input required type="text" placeholder="Nome" id="name" />
+          <input required type="email" placeholder="E-mail" id="email" />
         </fieldset>
 
         <fieldset>
           <legend>Seu endereço:</legend>
-          <input type="text" placeholder="CEP" />
-          <input type="text" placeholder="Estado" />
-          <input type="text" placeholder="Cidade" />
-          <input type="text" placeholder="Bairro" />
-          <input type="text" placeholder="Logradouro" />
-          <input type="number" placeholder="Número" />
+          <input
+            required
+            type="text"
+            placeholder="CEP"
+            id="cep"
+            onblur="searchCEP(this.value)"
+          />
+          <input required type="text" placeholder="Estado" id="uf" />
+          <input required type="text" placeholder="Cidade" id="cidade" />
+          <input required type="text" placeholder="Bairro" id="bairro" />
+          <input
+            required
+            type="text"
+            placeholder="Logradouro"
+            id="logradouro"
+          />
+          <input required type="number" placeholder="Número" id="numero" />
         </fieldset>
         <fieldset>
           <legend>Produtos</legend>
-          <p>...</p>
+          <div id="products"></div>
         </fieldset>
         <div class="completed-purchase">
-          <button>
+          <button id="finish-purchase" onclick="finishPurchase()">
             <img src="./img/gift.png" alt="Ícone de Presente" width="30" />
             <p>Finalizar compra</p>
           </button>
