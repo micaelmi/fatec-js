@@ -20,7 +20,7 @@ function renderOrders() {
     products = ``, amount = 0;
     item.produtos.map((prod) => {
       if (prod.quantity > 0) {
-        products += `<p>${prod.quantity}x ${prod.title} = ${prod.price} </p>`
+        products += `<p>${prod.quantity}x ${prod.title} = R$${prod.price} </p>`
         amount += prod.quantity * prod.price
       }
     })
