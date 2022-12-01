@@ -155,7 +155,7 @@ function finishPurchase() {
             color: 'green',
         });
         setInterval(() => {
-            window.location.href = '/completed-purchase.html';
+            window.location.href = 'completed-purchase.html';
         }, 1000)
     } else {
         iziToast.show({
