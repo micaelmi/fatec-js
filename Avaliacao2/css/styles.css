@@ -110,6 +110,12 @@ h2 img {
   width: 40px;
 }
 
+.center {
+  text-align: center;
+  display: block;
+  gap: 0;
+}
+
 .products {
   margin-top: 2rem;
 }

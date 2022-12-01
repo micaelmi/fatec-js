@@ -55,7 +55,13 @@
       <form>
         <fieldset>
           <legend>Seus dados:</legend>
-          <input required type="text" placeholder="CPF" id="cpf" />
+          <input
+            required
+            type="text"
+            placeholder="CPF"
+            id="cpf"
+            onblur="verifyIfUserExists(this.value)"
+          />
           <input required type="text" placeholder="Nome" id="name" />
           <input required type="email" placeholder="E-mail" id="email" />
         </fieldset>
@@ -85,7 +91,7 @@
           <div id="products"></div>
         </fieldset>
         <div class="completed-purchase">
-          <button id="finish-purchase" onclick="finishPurchase()">
+          <button type="button" id="finish-purchase">
             <img src="./img/gift.png" alt="Ícone de Presente" width="30" />
             <p>Finalizar compra</p>
           </button>

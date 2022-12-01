@@ -1,0 +1,41 @@
+:root {
+  --primary: #a30909;
+  --secondary: #056803;
+  --secondary-hover: #024b01;
+  --dark: #111;
+  --light: #fff;
+}
+
+main {
+  max-width: 800px;
+}
+
+h3 {
+  font-family: inherit;
+}
+
+.order {
+  border: 1px solid var(--secondary);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.order .header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+}
+
+.order .content {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.content .client,
+.content .products {
+  margin: 0;
+  padding: 0;
+}
