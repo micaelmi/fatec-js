@@ -179,7 +179,6 @@ function verifyIfUserExists(content) {
             bairro.value = orders[i].bairro
             logradouro.value = orders[i].logradouro
             numero.value = orders[i].numero
-            return;
         }
     }
 }
