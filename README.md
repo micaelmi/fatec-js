@@ -22,4 +22,17 @@ Exercícios de JavaScript do 2º semestre de ADS da Fatec
 5. Avaliação 1
 
 
+6. Introdução ao Local Storage
+
+
+7. Utilização do Local Storage e renderização de gráficos (Google Charts)
+![image](https://user-images.githubusercontent.com/66328408/206001644-d6cfe1b7-60bf-486f-adc5-4c68f01fc028.png)
+
+
+8. Projeto Final - Loja Virtual 
+![image](https://user-images.githubusercontent.com/66328408/206001888-4adcfaf7-d1f7-4bb2-a422-4346bbf21cf4.png)
+
+
+
+
 ## Acesse todoas as atividades em: https://micaelmi.github.io/fatec-js/
