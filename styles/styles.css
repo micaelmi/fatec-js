@@ -13,6 +13,7 @@ body {
   max-width: 800px;
   margin-inline: auto;
   margin-bottom: 10rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
 }
