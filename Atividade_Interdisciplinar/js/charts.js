@@ -16,11 +16,6 @@ function drawChart() {
   }
 
 
-  console.log("Data Content")
-  console.log(dataContent[0])
-  console.log(dataContent[1])
-  console.log(dataContent[2])
-
 
   var data = google.visualization.arrayToDataTable(dataContent);
 
@@ -41,7 +36,7 @@ function drawChart() {
 }
 
 function createChart() {
-  console.log("Criando gráfico")
+  // console.log("Criando gráfico")
 
   google.charts.load("current", { packages: ["bar"] });
   google.charts.setOnLoadCallback(drawChart);

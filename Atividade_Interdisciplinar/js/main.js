@@ -32,10 +32,10 @@ window.onload = () => {
             var res = this.responseText;
             // alert(res); //  A Variável res terá o conteúdo.
             content = res
-            console.log(content)
+            // console.log(content)
             let file = CSVToArray(content, ';', true)
             recordStorage("covidData", file)
-            console.log(JSON.stringify(file))
+            // console.log(JSON.stringify(file))
             createChart()
         }
     }
