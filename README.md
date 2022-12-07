@@ -32,6 +32,8 @@ Exercícios de JavaScript do 2º semestre de ADS da Fatec
 8. Projeto Final - Loja Virtual 
 ![image](https://user-images.githubusercontent.com/66328408/206001888-4adcfaf7-d1f7-4bb2-a422-4346bbf21cf4.png)
 
+9. Projeto Interdisciplinar - Criação de gráfico a partir de arquivo .csv
+![image](https://user-images.githubusercontent.com/66328408/206300973-36bc2984-8a10-4875-baad-0db18d0d6562.png)
 
 
 
